@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>commands</title>
+    <meta charset="UTF-16">
+    <script>
+        function emoji(num) {
+            var array = ["📰", "🤦", "☁️", "🗳️", "📚", "🎱", "🥠", "🍾", "✊✋✌", "⭐", "🔫", "🎲", "🎲", "🎲🎲🎲", "🌡️", "💲", "💯", "▶️", "⏭️",
+                "👨‍👩‍👧‍👦", "⏹️", "⏸️", "⏯️", "🎧", "🔀", "🗑️", "🔊", "📜", "🖼️", "🕵️",
+                "🔨", "⏲️", "💰", "🖥️", "🤖", "🔑", "🆙", "👑", "🟦", "🟥", "🤪", "📀", "🎉", "🌈","❌","👢","🔇","🔈","📶","📩","😠","📝","🕹️","⚙️"];
+            return array[num];
+        }
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css" media="screen">
+    #t1 tr:nth-child(odd) {
+        background-color: #909090;
+    }
+
+    #t1 tr:nth-child(even) {
+        background-color: lightgray;
+    }
+
+    .btn {
+        border: none;
+        color: green;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        opacity: 1
+    }
+</style>
+
+<body style="background-color: lightgray;">
+
+    <div class="container">
+        <h2>Commands</h2>
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <button class="btn" id="all">All</button>
+        <button class="btn general" id="general">General</button>
+        <button class="btn general" id="fun">Fun</button>
+        <button class="btn general" id="music">Music</button>
+        <button class="btn general" id="admin">Admin</button>
+        <button class="btn general" id="info">Info</button>
+        <button class="btn general" id="config">Config/Settings</button>
+        <br>
+        <table id="t1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>commands</th>
+                    <th>description</th>
+                    <th>usage</th>
+                    <th style="display:none;">all general</th>
+                    <th style="display:none;">admin fun</th>
+                    <th style="display:none;">music info1</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                <tr>
+                    <td>news
+                        <script>document.write(emoji(0))</script>
+                    </td>
+                    <td>See the news headlines of the day</td>
+                    <td>$news</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">general</td>
+                </tr>
+                <tr>
+                    <td>meme
+                        <script>document.write(emoji(1))</script>
+                    </td>
+                    <td>get some good memes</td>
+                    <td>$meme</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;"> general</td>
+                </tr>
+                <tr>
+                    <td>weather
+                        <script>document.write(emoji(2))</script>
+                    </td>
+                    <td>get the daily weather of a city.</td>
+                    <td>$weather [city], (if not found do [city, zipcode])</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;"> general</td>
+                </tr>
+                <tr>
+                    <td>poll
+                        <script>document.write(emoji(3))</script>
+                    </td>
+                    <td>create a poll</td>
+                    <td>$poll Question /Choice 1/ Choice 2/……</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;"> general</td>
+                </tr>
+                <tr>
+                    <td>urban
+                        <script>document.write(emoji(4))</script>
+                    </td>
+                    <td>urban dictionary(Leave Blank for random word)</td>
+                    <td>$urban</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;"> general</td>
+                </tr>
+                <tr>
+                    <td>8ball
+                        <script>document.write(emoji(5))</script>
+                    </td>
+                    <td>Ask the 8ball fortune teller</td>
+                    <td>$8ball [words]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;"> general</td>
+                </tr>
+                <tr>
+                    <td>cookie
+                        <script>document.write(emoji(6))</script>
+                    </td>
+                    <td>get a fortune cookie.</td>
+                    <td>$cookie</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;"> general</td>
+                </tr>
+                <tr>
+                    <td>bottle
+                        <script>document.write(emoji(7))</script>
+                    </td>
+                    <td>find a message in a bottle from another server.</td>
+                    <td>$cookie</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;"> general</td>
+                </tr>
+                <tr>
+                    <td>sendbottle
+                        <script>document.write(emoji(7))</script>
+                    </td>
+                    <td>send a message in a bottle to another server</td>
+                    <td>$sendbottle [message]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">general</td>
+                </tr>
+                <tr>
+                    <td>wallpaper
+                        <script>document.write(emoji(33))</script>
+                    </td>
+                    <td>get a random wallpaper for your desktop</td>
+                    <td>$wallpaper</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">general</td>
+                </tr>
+                <tr>
+                    <td>xp
+                        <script>document.write(emoji(36))</script>
+                    </td>
+                    <td>see your xp or someone else's current xp[XP SYSTEM MUST BE ON]</td>
+                    <td>$xp or $xp @username</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">general</td>
+                </tr>
+                <tr>
+                    <td>leaderboard
+                        <script>document.write(emoji(37))</script>
+                    </td>
+                    <td>see the current server leaderboard for xp stats!</td>
+                    <td>$leaderboard</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">general</td>
+                </tr>
+                <tr>
+                    <td>encrypt
+                        <script>document.write(emoji(35))</script>
+                    </td>
+                    <td>provide two things, a key and a phrase to encrypt into random text, to decode use the decrypt
+                        command</td>
+                    <td>$encrypt [key] [words]<a href="https://gyazo.com/83cb8d7f5c7fa70422bbb090ec1528a6"> Click for an
+                            Example</a></td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">general</td>
+                </tr>
+                <tr>
+                    <td>decrypt
+                        <script>document.write(emoji(35))</script>
+                    </td>
+                    <td>provide two things, a key from before and a phrase to decrypt back</td>
+                    <td>$decrypt [key] [words] </key> <a href="https://gyazo.com/83cb8d7f5c7fa70422bbb090ec1528a6.png">
+                            Click for an Example</a></td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">general</td>
+                </tr>
+                <tr>
+                    <td>rps
+                        <script>document.write(emoji(8))</script>
+                    </td>
+                    <td>play Rock, Paper, Scissors against me</td>
+                    <td>$rps [choice]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>rate
+                        <script>document.write(emoji(9))</script>
+                    </td>
+                    <td>get my rating of anything</td>
+                    <td>$rate [words]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>revolver
+                        <script>document.write(emoji(10))</script>
+                    </td>
+                    <td>play russian roulette</td>
+                    <td>$revolver</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>coin
+                        <script>document.write(emoji(41))</script>
+                    </td>
+                    <td>flip a fair coin</td>
+                    <td>$coin</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>roll6
+                        <script>document.write(emoji(11))</script>
+                    </td>
+                    <td>roll a 6-sided die</td>
+                    <td>$roll6</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>roll20
+                        <script>document.write(emoji(12))</script>
+                    </td>
+                    <td>roll a 20-sided die</td>
+                    <td>$roll20</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>roll
+                        <script>document.write(emoji(13))</script>
+                    </td>
+                    <td>roll some dice</td>
+                    <td>$roll [sides of die] [#times]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>f2c
+                        <script>document.write(emoji(14))</script>
+                    </td>
+                    <td>fahrenheit to celsius</td>
+                    <td>$f2c [number]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>c2f
+                        <script>document.write(emoji(14))</script>
+                    </td>
+                    <td>celsius to fahrenheit</td>
+                    <td>$c2f [number]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>curr
+                        <script>document.write(emoji(15))</script>
+                    </td>
+                    <td>convert currency</td>
+                    <td>$curr [money] [ISO CODE] [ISO CODE]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>wume
+                        <script>document.write(emoji(16))</script>
+                    </td>
+                    <td>get your wu-tang name</td>
+                    <td>$wume @name</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>mock
+                        <script>document.write(emoji(42))</script>
+                    </td>
+                    <td>CrEaTe TeXt LiKe ThIs, the bot will attribute you</td>
+                    <td>$mock [text]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>joke
+                        <script>document.write(emoji(40))</script>
+                    </td>
+                    <td>get a random joke, no refunds!</td>
+                    <td>$joke</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>inspire
+                        <script>document.write(emoji(34))</script>
+                    </td>
+                    <td>get inspiring quotes from InspiroBot</td>
+                    <td>$inspire</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>fact
+                        <script>document.write(emoji(43))</script>
+                    </td>
+                    <td>get a random fact</td>
+                    <td>$fact</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>fod
+                        <script>document.write(emoji(40)); document.write(emoji(43))</script>
+                    </td>
+                    <td>get the fact of the day</td>
+                    <td>$fod</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>biden
+                        <script>document.write(emoji(38))</script>
+                    </td>
+                    <td>get a biden quote from wikiquote(quotes may have errors)</td>
+                    <td>$biden</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>trump
+                        <script>document.write(emoji(39))</script>
+                    </td>
+                    <td>get a trump quote from wikiquote(quotes may have errors)</td>
+                    <td>$trump</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">fun</td>
+                </tr>
+                <tr>
+                    <td>play
+                        <script>document.write(emoji(17))</script>
+                    </td>
+                    <td>play/add song to queue.</td>
+                    <td>$play [youtube video url/actual song name]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">music</td>
+                </tr>
+                <tr>
+                    <td>skip
+                        <script>document.write(emoji(18))</script>
+                    </td>
+                    <td>skip to the next song.</td>
+                    <td>$skip</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">music</td>
+                </tr>
+                <tr>
+                    <td>queue
+                        <script>document.write(emoji(19))</script>
+                    </td>
+                    <td>see songs up next in queue.</td>
+                    <td>$queue</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">music</td>
+                </tr>
+                <tr>
+                    <td>stop
+                        <script>document.write(emoji(20))</script>
+                    </td>
+                    <td>stop playing music/clear queue</td>
+                    <td>$stop</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">music</td>
+                </tr>
+                <tr>
+                    <td>pause
+                        <script>document.write(emoji(21))</script>
+                    </td>
+                    <td>pause the music player</td>
+                    <td>$stop</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">music</td>
+                </tr>
+                <tr>
+                    <td>resume
+                        <script>document.write(emoji(22))</script>
+                    </td>
+                    <td>resume a paused song</td>
+                    <td>$resume</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">music</td>
+                </tr>
+                <tr>
+                    <td>current
+                        <script>document.write(emoji(23))</script>
+                    </td>
+                    <td>see current song playing</td>
+                    <td>$current</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">music</td>
+                </tr>
+                <tr>
+                    <td>shuffle
+                        <script>document.write(emoji(24))</script>
+                    </td>
+                    <td>shuffle the queue</td>
+                    <td>$shuffle</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">music</td>
+                </tr>
+                <tr>
+                    <td>clear
+                        <script>document.write(emoji(25))</script>
+                    </td>
+                    <td>clear the queue</td>
+                    <td>$queue</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">music</td>
+                </tr>
+                <tr>
+                    <td>volume
+                        <script>document.write(emoji(26))</script>
+                    </td>
+                    <td>change the volume, default is 100.</td>
+                    <td>$volume [number]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">music</td>
+                </tr>
+                <tr>
+                    <td>say
+                        <script>document.write(emoji(27))</script>
+                    </td>
+                    <td>make the bot say a message, [ADMIN PERMS NEEDED]</td>
+                    <td>$say [message]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">admin</td>
+                </tr>
+                <tr>
+                    <td>pic
+                        <script>document.write(emoji(28))</script>
+                    </td>
+                    <td>make the bot send a picture, [ADMIN PERMS NEEDED]</td>
+                    <td>$pic [upload/link]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">admin</td>
+                </tr>
+                <tr>
+                    <td>purge<script>document.write(emoji(44))</script></td>
+                    <td>delete messages in channel, [ADMIN PERMS NEEDED]</td>
+                    <td>$purge [number]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">admin</td>
+                </tr>
+                <tr>
+                    <td>userinfo
+                        <script>document.write(emoji(29))</script>
+                    </td>
+                    <td>see user information</td>
+                    <td>$userinfo @username</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">admin</td>
+                </tr>
+                <tr>
+                    <td>ban
+                        <script>document.write(emoji(30))</script>
+                    </td>
+                    <td>ban user from the server, [ADMIN PERMS NEEDED]</td>
+                    <td>$ban @username</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">admin</td>
+                </tr>
+                <tr>
+                    <td>kick<script>document.write(emoji(45))</script></td>
+                    <td>kick user from the server(will send an invite back), [ADMIN PERMS NEEDED]</td>
+                    <td>$kick @username</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">admin</td>
+                </tr>
+                <tr>
+                    <td>muteall<script>document.write(emoji(46))</script></td>
+                    <td>mute all users in a voice channel except yourself, [ADMIN PERMS NEEDED]</td>
+                    <td>$muteall</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">admin</td>
+                </tr>
+                <tr>
+                    <td>unmuteall<script>document.write(emoji(47))</script></td>
+                    <td>ummute all users in a voice channel, [ADMIN PERMS NEEDED]</td>
+                    <td>$unmuteall</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">admin</td>
+                </tr>
+                <tr>
+                    <td>server<script>document.write(emoji(52))</script></td>
+                    <td>get game server information, if one set from $config</td>
+                    <td>$server</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">info1</td>
+                </tr>
+                <tr>
+                    <td>server2<script>document.write(emoji(52))</script></td>
+                    <td>get second game server information, if one set from $config</td>
+                    <td>$server</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">info1</td>
+                </tr>
+                <tr>
+                    <td>complain<script>document.write(emoji(50))</script></td>
+                    <td>work in progress</td>
+                    <td>$complain</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">info1</td>
+                </tr>
+                <tr>
+                    <td>uptime
+                        <script>document.write(emoji(31))</script>
+                    </td>
+                    <td>get bot uptime and additional info</td>
+                    <td>$uptime</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">info1</td>
+                </tr>
+                <tr>
+                    <td>donate
+                        <script>document.write(emoji(32))</script>
+                    </td>
+                    <td>donate to support the Marshal's upkeep</td>
+                    <td>$donate</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">info1</td>
+                </tr>
+                <tr>
+                    <td>contact<script>document.write(emoji(49))</script></td>
+                    <td>contact to get help from the developr or send reports/suggestions</td>
+                    <td>$contact</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">info1</td>
+                </tr>
+                <tr>
+                    <td>ping<script>document.write(emoji(48))</script></td>
+                    <td>ping the bot</td>
+                    <td>$ping</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">info1</td>
+                </tr>
+                <tr>
+                    <td>changelog<script>document.write(emoji(51))</script></td>
+                    <td>see the most recent changes and updates</td>
+                    <td>$changelog</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">info1</td>
+                </tr>
+                <tr>
+                    <td>config xp<script>document.write(emoji(53))</script></td>
+                    <td>This will enable the xp system on the server!</td>
+                    <td>$config xp</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">config1</td>
+                </tr>
+                <tr>
+                    <td>config dm<script>document.write(emoji(53))</script></td>
+                    <td>[This sets a direct message for new users on joining], you can use {server} for server name and {user} to @ them in your direct message</td>
+                    <td>$config dm [Type direct message here]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">config1</td>
+                </tr>
+                <tr>
+                    <td>config greeting<script>document.write(emoji(53))</script></td>
+                    <td>[This sets a greeting message for new users, in the text channel the command was used], you can use {server} for server name and {user} to @ them in your greeting</td>
+                    <td>$config greeting [your welcome message]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">config1</td>
+                </tr>
+                <tr>
+                    <td>config prefix<script>document.write(emoji(53))</script></td>
+                    <td>This will allow you to change the default command prefix $ to another one such as exclamation mark (!), a dot (.), a question mark(?), (~), (?) and more!</td>
+                    <td>$config prefix [Enter a new prefix]</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">config1</td>
+                </tr>
+                <tr>
+                    <td>config joinrole<script>document.write(emoji(53))</script></td>
+                    <td>This will add a role/tag to a user on joining!,Make sure the bot's role/tag is higher than the role that is added!!!!!!</td>
+                    <td>$config joinrole @rolename (or) rolename</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">config1</td>
+                </tr>
+                <tr>
+                    <td>config joinrole2<script>document.write(emoji(53))</script></td>
+                    <td>This will add a second role/tag(if needed) to a user on joining!,Make sure the bot's role/tag is higher than the role that is added!!!!!!</td>
+                    <td>$config joinrole2 @rolename (or) rolename</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">config1</td>
+                </tr>
+                <tr>
+                    <td>$config server<script>document.write(emoji(53))</script></td>
+                    <td>This will set a game server to retrieve info from(used with the $server command)!, You can leave out the port option.</td>
+                    <td>$config server minecraft 55.55.55.55 25565 <a href="https://docs.google.com/document/d/135WnSxUZujkpY2uZov-QfVqBrjH9nVaRi_91B1BMZPs/edit"> Click for Supported Games</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">config1</td>
+                </tr>
+                <tr>
+                    <td>$config server2<script>document.write(emoji(53))</script></td>
+                    <td>This will set a second game server to retrieve info from(used with the $server2 command)!, You can leave out the port option.</td>
+                    <td>$config server2 minecraft 55.55.55.55 25565 <a href="https://docs.google.com/document/d/135WnSxUZujkpY2uZov-QfVqBrjH9nVaRi_91B1BMZPs/edit"> Click for Supported Games</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">config1</td>
+                </tr>
+                <tr>
+                    <td>config resetdb<script>document.write(emoji(53))</script></td>
+                    <td>This will wipe your saved server settings from the bot.</td>
+                    <td>$config resetdb</td>
+                    <td style="display:none;">all</td>
+                    <td style="display:none;">config1</td>
+                </tr>
+                <tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+
+    </script>
+    <script>
+        $("#all").click(function () {
+            var rows = $("#t1").find("tr").hide();
+            rows.filter(":contains('all')").show();
+        });
+    </script>
+    <script>
+        $("#general").click(function () {
+            var rows = $("#t1").find("tr").hide();
+            rows.filter(":contains('general')").show();
+        });
+    </script>
+    <script>
+        $("#fun").click(function () {
+            var rows = $("#t1").find("tr").hide();
+            rows.filter(":contains('fun')").show();
+        });
+    </script>
+    <script>
+        $("#music").click(function () {
+            var rows = $("#t1").find("tr").hide();
+            rows.filter(":contains('music')").show();
+        });
+    </script>
+    <script>
+        $("#admin").click(function () {
+            var rows = $("#t1").find("tr").hide();
+            rows.filter(":contains('admin')").show();
+        });
+    </script>
+    <script>
+        $("#info").click(function () {
+            var rows = $("#t1").find("tr").hide();
+            rows.filter(":contains('info1')").show();
+        });
+    </script>
+     <script>
+        $("#config").click(function () {
+            var rows = $("#t1").find("tr").hide();
+            rows.filter(":contains('config1')").show();
+        });
+    </script>
+</body>
+
+</html>
